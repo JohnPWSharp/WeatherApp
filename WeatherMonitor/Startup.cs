@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.ApplicationInsights;
 
 namespace WeatherMonitor
 {
@@ -32,7 +31,6 @@ namespace WeatherMonitor
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddApplicationInsightsTelemetry(); // Add app insights
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
